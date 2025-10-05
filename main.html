@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แบบฝึกหัด JavaScript DOM</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+    h2 { color: #2c3e50; }
+    button { margin-top: 10px; }
+    input, button { font-size: 1em; padding: 5px; }
+    h4 {color: red}
+  </style>
+</head>
+<body>
+
+  <h1>รวมแบบฝึกหัด JavaScript DOM</h1>
+
+  <!-- Task 1 -->
+  <section>
+    <h2>Task 1: การเข้าถึงและแสดงผล Element </h2>
+    <h4 id="main-title">โจทย์ : เมื่อคลิก ปุ่ม คลิกฉัน ข้อความว่า สวัสดี จะเปลี่ยนเป็นชื่อของเรา เเละ กำลังโหลด จะเปลี่ยนเป็น โหลดเสร็จสิ้น</h4>
+    <h3 id="main-titlee">สวัสดี!</h3>
+    <p id="message">ข้อความนี้จะถูกเปลี่ยน</p>
+    <button onclick="sayHello()" id="btn-change">คลิกฉัน</button>
+    <p id="status-one">กำลังโหลด...</p>
+  </section>
+
+  <!-- Task 2 -->
+  <section>
+    <h2>Task 2: การรับค่าจาก Input</h2>
+      <h4 id="main-title">โจทย์ : เมื่อคลิก ปุ่ม เเสดงคำทักทาย จะเเสดง คำทักทายออกมาเช่น "สวัสดี (ชื่อของคุณจาก Input)"</h4>
+    <input type="text" id="nameInput-two" placeholder="ป้อนชื่อของคุณ" />
+    <button onclick="hiName()">แสดงคำทักทาย</button>
+    <p id="output-two"></p>
+  </section>
+
+  <!-- Task 3 -->
+  <section>
+    <h2>Task 3: การเปลี่ยน Style</h2>
+     <h4 id="main-title">โจทย์ : เมื่อคลิก ปุ่ม เปลี่ยนสไตล์ ข้อความ "เปลี่ยนสไตล์ฉันสิ" จะเปลี่ยนสีเป็นสีอะไรก็ได้ 1 สี เเละ เปลี่ยนขนาดข้อความให้ใหญ่ขึ้น "</h4>
+    <h3 id="title-three">เปลี่ยนสไตล์ฉันสิ</h3>
+    <p id="style-text">ข้อความนี้จะเปลี่ยนขนาด</p>
+    <button onclick="changeStyle()">เปลี่ยนสไตล์</button>
+  </section>
+
+  <!-- Task 4 -->
+  <section>
+    <h2>Task 4: การเปลี่ยน Element แบบไดนามิก</h2>
+        <h4 id="main-title">โจทย์ : เมื่อคลิก ปุ่ม อัพเดตข้อความ จะทำการเเสดงข้อความจาก Input เเต่ถ้าหากมีการ เพิ่มข้อความจะไปต่อด้านหลังข้อความก่อนหน้าโดยที่ข้อความเก่ายังคงอยู่ "</h4>
+    <input type="text" id="inputBox-four" placeholder="พิมพ์ข้อความ" />
+    <button onclick="addStuff()">อัปเดตข้อความ</button>
+    <div id="display-four"></div>
+  </section>
+
+  <!-- Task 5 -->
+  <section>
+    <h2>Task 5: การซ่อน/แสดง Element</h2>
+     <h4 id="main-title">โจทย์ : เมื่อคลิก ปุ่ม ซ่อนข้อความครั้งเเรก จะทำการซ่อนข้อความ นี่คือข้อความลับ เเละถ้าหากคลิกครั้งที่ 2 จะเเสดงข้อความ นี่คือข้อความลับ ดังเดิม"</h4>
+    <p id="secret">นี่คือข้อความลับ</p>
+    <button onclick="toggleSecret()">ซ่อน/แสดง</button>
+  </section>
+  
+  
+  <!-- Task 6-->
+<section>
+  <h2>Task 6 : การเเทนที่ Dom</h2>
+  <h4>โจทย์: คลิกปุ่มเพื่อเพิ่มข้อความใหม่ลงใน div</h4>
+  <input type="text" id="inputBox1" placeholder="พิมพ์ข้อความ" />
+  <button onclick="editDom">อัปเดตข้อความ</button>
+  <div id="display1"></div>
+</section>
+  
+   <!-- Task 7-->
+  <section>
+  <h2>Task 7: การ Add Dom</h2>
+  <h4>โจทย์: คลิกปุ่มเพื่อเพิ่มรายการใหม่ลงในลิสต์ด้านล่าง</h4>
+  <input type="text" id="itemInput" placeholder="พิมพ์สิ่งที่ต้องการเพิ่ม" />
+  <button onclick="addDom()">เพิ่มรายการ</button>
+  <ul id="myList"></ul>
+</section>
+  
+  
+     <!-- Task 8-->
+  <section>
+  <h2>Task 8 การ Delete Dom</h2>
+  <h4>โจทย์: คลิกปุ่มเพื่อลบรายการสุดท้ายออกจากลิสต์</h4>
+  <button onclick="deleteDom()">ลบรายการสุดท้าย</button>
+  <ul id="myList2">
+    <li>ตัวอย่าง 1</li>
+    <li>ตัวอย่าง 2</li>
+  </ul>
+</section>
+  
+  
+  <div id="conun"> </div>
+   <button onclick="saygood()">add</button>
+  
+     <button onclick="sayBad()">addpend</button>
+  
+  <script>
+    
+   // เขียน Function ลงตรงนี้เช่น
+    function saygood() {
+      my_div = document.getElementById("conun")
+      my_div.remove()
+      
+      
+    }
+    
+    function sayBad(){
+      newItem = document.createElement("h1")
+      newItem.textContent = "Cool"
+      
+      document.getElementById("conun").appendChild(newItem)
+    }
+    
+    function sayHello(){
+      const changeHello = document.getElementById("main-titlee")
+      const changeLoading = document.getElementById("status-one")
+      changeHello.innerText = "สวัสดี Tee!"
+      changeLoading.innerText = "Finished Loading"
+    }
+    
+    sayHello()
+    
+    function hiName(){
+      const name = document.getElementById("nameInput-two").value;
+      const addHello = document.getElementById("output-two")
+      addHello.innerText = "สวัสดี "+ name
+    }
+    
+    hiName()
+    
+    function changeStyle(){ 
+      const styleChange = document.getElementById("title-three").style.color = "blue";
+      const twoStyleChange = document.getElementById("title-three").style.fontSize = "40px";
+    }
+    
+    function addStuff(){
+      const stuffInput = document.getElementById("inputBox-four").value;
+      const add = document.getElementById("display-four")
+      add.innerText = document.getElementById("display-four").innerText + document.getElementById("inputBox-four").value
+    }
+
+    
+  </script>
+</body>
+</html>
