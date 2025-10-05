@@ -144,6 +144,16 @@
       add.innerText = document.getElementById("display-four").innerText + document.getElementById("inputBox-four").value
     }
 
+    var round = 0
+    function toggleSecret(){
+      const chanText = document.getElementById("secret")
+      if(round / 2 == 0){
+        chanText.innerText = ""
+      }else{
+        chanText.innerText = "นี่คือข้อความลับ"
+      }
+      round += 1
+    }
     
   </script>
 </body>
