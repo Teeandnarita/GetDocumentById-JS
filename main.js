@@ -15,3 +15,9 @@
       const styleChange = document.getElementById("title-three").style.color = "blue";
       const twoStyleChange = document.getElementById("title-three").style.fontSize = "40px";
     }
+
+function addStuff(){
+      const stuffInput = document.getElementById("inputBox-four").value;
+      const add = document.getElementById("display-four")
+      add.innerText = document.getElementById("display-four").innerText + document.getElementById("inputBox-four").value
+    }
