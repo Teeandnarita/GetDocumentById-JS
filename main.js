@@ -42,6 +42,13 @@ function toggleSecret() {
   round += 1;
 }
 
+   function editDom6(){
+  const getInput6 = document.getElementById("inputBox6").value;
+     console.log(getInput6)
+  const displayItem6 = document.getElementById("display6")
+  displayItem6.innerHTML = "<p>" + getInput6 + "</p>";
+}
+
    function addDom7(){
   const input7 = document.getElementById("inputBox7").value;   
   const displayItem = document.createElement("li");
