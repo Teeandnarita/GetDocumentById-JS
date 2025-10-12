@@ -41,3 +41,10 @@ function toggleSecret() {
   }
   round += 1;
 }
+
+   function addDom7(){
+  const input7 = document.getElementById("inputBox7").value;   
+  const displayItem = document.createElement("li");
+  displayItem.textContent = input7 ;
+  document.getElementById("display7").appendChild(displayItem);
+}
