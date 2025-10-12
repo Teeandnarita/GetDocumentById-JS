@@ -55,3 +55,7 @@ function toggleSecret() {
   displayItem.textContent = input7 ;
   document.getElementById("display7").appendChild(displayItem);
 }
+
+ function deleteDom(){
+      const deleto = document.getElementById("li2").remove()
+    }
