@@ -62,23 +62,22 @@
     <button onclick="toggleSecret()">ซ่อน/แสดง</button>
   </section>
   
-  
   <!-- Task 6-->
 <section>
   <h2>Task 6 : การเเทนที่ Dom</h2>
   <h4>โจทย์: คลิกปุ่มเพื่อเพิ่มข้อความใหม่ลงใน div</h4>
-  <input type="text" id="inputBox1" placeholder="พิมพ์ข้อความ" />
-  <button onclick="editDom">อัปเดตข้อความ</button>
-  <div id="display1"></div>
+  <input type="text" id="inputBox6" placeholder="พิมพ์ข้อความ" />
+  <button onclick="editDom6()">อัปเดตข้อความ</button>
+  <div id="display6"></div>
 </section>
   
    <!-- Task 7-->
   <section>
   <h2>Task 7: การ Add Dom</h2>
   <h4>โจทย์: คลิกปุ่มเพื่อเพิ่มรายการใหม่ลงในลิสต์ด้านล่าง</h4>
-  <input type="text" id="itemInput" placeholder="พิมพ์สิ่งที่ต้องการเพิ่ม" />
-  <button onclick="addDom()">เพิ่มรายการ</button>
-  <ul id="myList"></ul>
+  <input type="text" id="inputBox7" placeholder="พิมพ์สิ่งที่ต้องการเพิ่ม" />
+  <button onclick="addDom7()">เพิ่มรายการ</button>
+  <ul id="display7"></ul>
 </section>
   
   
@@ -88,8 +87,8 @@
   <h4>โจทย์: คลิกปุ่มเพื่อลบรายการสุดท้ายออกจากลิสต์</h4>
   <button onclick="deleteDom()">ลบรายการสุดท้าย</button>
   <ul id="myList2">
-    <li>ตัวอย่าง 1</li>
-    <li>ตัวอย่าง 2</li>
+    <li id"li1">ตัวอย่าง 1</li>
+    <li id="li2">ตัวอย่าง 2</li>
   </ul>
 </section>
   
@@ -153,6 +152,24 @@
         chanText.innerText = "นี่คือข้อความลับ"
       }
       round += 1
+    }
+
+      function editDom6(){
+  const getInput6 = document.getElementById("inputBox6").value;
+     console.log(getInput6)
+  const displayItem6 = document.getElementById("display6")
+  displayItem6.innerHTML = "<p>" + getInput6 + "</p>";
+}
+    
+    function addDom7(){
+  const input7 = document.getElementById("inputBox7").value;   
+  const displayItem = document.createElement("li");
+  displayItem.textContent = input7 ;
+  document.getElementById("display7").appendChild(displayItem);
+}
+   
+    function deleteDom(){
+      const deleto = document.getElementById("li2").remove()
     }
     
   </script>
